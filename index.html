@@ -10,18 +10,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="./app/css/styles.css" />
 		<title>Frontend Mentor | Easybank landing page</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
 	</head>
 
 	<body>
@@ -30,17 +18,20 @@
 				<header class="header">
 					<nav class="flex flex-jc-sb flex-ai-c">
 						<a href="/" class="header__logo">
-							<img src="./images/logo.svg" alt="Easybank Logo" />
+							<img src="./app/images/logo.svg" alt="Easybank Logo" />
 						</a>
-						<a href="#" class="header__menu">
-							<img src="./images/icon-hamburger.svg" alt="Menu button" />
+						<a href="#" class="header__menu hide-for-desktop">
+							<img src="./app/images/icon-hamburger.svg" alt="Menu button" />
 						</a>
-						<div class="header__links">
+						<div class="header__links hide-for-mobile">
 							<a href="#">Home</a>
 							<a href="#">About</a>
 							<a href="#">Contact</a>
 							<a href="#">Blog</a>
 							<a href="#">Careers</a>
+						</div>
+						<div class="hide-for-mobile">
+							<button class="btn btn-gradient">Request Invite</button>
 						</div>
 					</nav>
 				</header>
