@@ -17,6 +17,33 @@ body {
 	background-color: $white;
 	font-size: 1.125rem;
 }
+h1,
+h2,
+h3 {
+	margin-top: 0;
+}
+.container {
+	padding-top: 4rem;
+	padding-bottom: 8rem;
+	// padding-left: 9.7rem
+	&--pl {
+		@include breakpoint-down('medium') {
+			padding-left: 2rem;
+		}
+		@include breakpoint-up('medium') {
+			padding-left: 9.7rem;
+		}
+	}
+
+	&--pr {
+		@include breakpoint-down('medium') {
+			padding-right: 2rem;
+		}
+		@include breakpoint-up('medium') {
+			padding-right: 9.7rem;
+		}
+	}
+}
 
 .flex {
 	display: flex;
@@ -38,11 +65,19 @@ body {
 	border: $white;
 	font-size: $font-small;
 	padding: 15px 30px;
+	cursor: pointer;
 }
 
 .btn-gradient {
 	background-image: linear-gradient(to right, $limeGreen, $brightCyan);
 	color: $white;
+}
+
+.btn_invite {
+	transition: opacity 200ms ease-in-out;
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 // visiblity
@@ -57,3 +92,7 @@ body {
 		display: none;
 	}
 }
+
+// * {
+// 	border: 0.2px dashed darkblue;
+// }

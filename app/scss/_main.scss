@@ -1,0 +1,89 @@
+main {
+	.intro {
+		@include breakpoint-up('medium') {
+			display: flex;
+			overflow: hidden;
+		}
+		&__image {
+			@include breakpoint-up('medium') {
+				background: none;
+				order: 2;
+				flex: 3;
+				// overflow: visible;
+				// background-size: contain;
+				// bottom: 14.5rem;
+				// left: 14.5rem;
+				padding-bottom: 50%;
+				&::after {
+					content: '';
+					position: absolute;
+					background: url(./../images/bg-intro-desktop.svg);
+					background-repeat: no-repeat;
+					background-size: 140%;
+					background-position: 12%;
+					z-index: 1;
+					top: -41%;
+					bottom: 0;
+					left: 0%;
+					right: 0;
+					min-width: 630px;
+				}
+			}
+			width: 100%;
+			background: url(./../images/bg-intro-mobile.svg);
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			overflow: hidden;
+			padding-bottom: 72%;
+		}
+		&__image::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: -15px;
+			right: 0;
+			background: url(./../images/image-mockups.png);
+			background-repeat: no-repeat;
+			background-size: 92%;
+			background-position: center bottom;
+			@include breakpoint-up('medium') {
+				z-index: 2;
+				background-position: top right;
+				width: 100%;
+				top: -16%;
+				overflow: visible;
+				left: 15%;
+				min-width: 500px;
+			}
+		}
+
+		&__text {
+			text-align: center;
+			h1 {
+				font-size: 2rem;
+				font-weight: 300;
+				color: $darkBlue;
+				line-height: 1.2;
+				margin-bottom: 2rem;
+			}
+			p {
+				line-height: 1.5rem;
+				color: $grayishBlue;
+				margin-bottom: 3rem;
+			}
+			@include breakpoint-up('medium') {
+				order: 1;
+				flex: 2;
+				text-align: left;
+				padding-right: 1rem;
+				align-self: center;
+				h1 {
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+}
